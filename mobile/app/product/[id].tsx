@@ -8,6 +8,7 @@ import { VStack } from "@/components/ui/vstack";
 import { Heading } from "@/components/ui/heading";
 import { Box } from "@/components/ui/box";
 import { Button, ButtonText } from "@/components/ui/button";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const ProductDetailsScreen = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -18,6 +19,8 @@ const ProductDetailsScreen = () => {
 
   const { image, name, description, price } = product || {};
   return (
+    <SafeAreaView className="p-3">
+
     <Card className="p-5">
       <Image
         size="2xl"
@@ -56,6 +59,8 @@ const ProductDetailsScreen = () => {
         </Button>
       </Box>
     </Card>
+    </SafeAreaView>
+
   );
 };
 

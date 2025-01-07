@@ -16,8 +16,8 @@ const ProductListItem = ({
 }) => {
   return (
     <Link href={`/product/${id}`} asChild>
-      <Pressable className={`w-[48%] h-[auto] rounded-lg ${className}`}>
-        <Card className="p-5">
+      <Pressable className={`rounded-lg ${className}`}>
+        <Card>
           <Image
             size="2xl"
             source={{
